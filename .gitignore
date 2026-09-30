@@ -1,0 +1,12 @@
+node_modules/
+test/
+reports/
+.env
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.pdf
+*.png
+*.jpg
+*.jpeg
