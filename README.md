@@ -2,9 +2,18 @@
 
 使用 Agent 自带的模型，对一份简历和同一岗位的多张招聘截图做匹配分析。先向求职者提问，再输出带依据的整数评分、简历优化建议、需问 HR 的事项，以及三版 Boss 直聘招呼语。用户提出导出请求时，可将报告保存为 Word 文档。
 
-## 安装（Codex / Windows）
+## 从链接安装（Codex / Windows）
 
-需要 Node.js 和 npm。把本仓库克隆到用户目录下的 `.codex/skills/job-match`，然后在该目录运行 `npm ci`。例如在 PowerShell 中：
+需要 Git、Node.js 和 npm。在准备使用 Codex 的项目目录打开 PowerShell，运行：
+
+```powershell
+npx --yes skills add https://github.com/Gyren008466/job-match --skill job-match --agent codex --copy -y
+npm ci --prefix .agents/skills/job-match
+```
+
+第一条命令复制 Skill 到当前项目，第二条命令安装读取 Word/PPT 和导出 Word 所需的库；Skills CLI 不会自动执行 `npm ci`。
+
+不使用 Skills CLI 时，也可以把本仓库直接克隆到用户目录下的 `.codex/skills/job-match`：
 
 ```powershell
 git clone https://github.com/Gyren008466/job-match.git "$HOME\.codex\skills\job-match"
